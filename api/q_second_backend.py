@@ -113,7 +113,6 @@ for i in Fenpian_node:
 # print(less_list)
 # print(len(normal_list))
 # print(len(less_list))
-
 need_move_fenpian=[]
 #将大节点挪到小节点，根据索引相同
 def move_node_lenths(sublist,less_list):
@@ -134,6 +133,8 @@ def move_node_lenths(sublist,less_list):
             # new_node_dict['ip']=get_node_ip(assign_node(less_list))#只修改了其中一个节点
                  lislen=lislen-1
                  sublist = [d for d in sublist if d != new_node_dict]#必须从子列表中删去该字典，否则排序还是把它排在第一位
+    print(need_move_fenpian)
+    return need_move_fenpian
 
 
 
@@ -166,7 +167,14 @@ def get_node_ip(node):
 
 
 
-move_node_lenths(more_list,less_list)
+#move_node_lenths(more_list,less_list)
 
-print(f"总的结果是{need_move_fenpian}")
+#print(f"总的结果是{need_move_fenpian}")
 #返回值：need_move_fenpian 一个对象数组, 对象字段：索引名&主副分片&分片编号，目标节点
+
+def allow_fenpian():
+    list= move_node_lenths(more_list,less_list)
+    return list
+
+
+allow_fenpian()

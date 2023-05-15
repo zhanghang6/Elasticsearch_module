@@ -25,8 +25,9 @@ def get_third_question_list():
     # 初始化每台物理机的标准配置
     physical_machine = {"name": "BM-NEW", "cpu": 120, "memory": 512, "disk": 12516}
     # 从excel表中读取物理机的信息
+
     df2 = pd.read_excel(
-        "C:/Software_textwork/Elasticsearch_module/api/third_data.xlsx",
+        absolute_path,
         sheet_name="物理机BM",
         header=0,
     )

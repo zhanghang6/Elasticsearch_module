@@ -1,11 +1,11 @@
 .DS_Store
-node_modules/
-dist/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-package-lock.json
-tests/**/coverage/
+template/node_modules/
+template/dist/
+templatenpm-debug.log*
+template/yarn-debug.log*
+template/yarn-error.log*
+template/package-lock.json
+template/tests/**/coverage/
 
 # Editor directories and files
 .idea
@@ -14,3 +14,7 @@ tests/**/coverage/
 *.ntvs*
 *.njsproj
 *.sln
+
+template/node_modules/
+api/venv/
+api/__pycache__/

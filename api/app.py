@@ -5,7 +5,7 @@ import json
 import backend
 import q_first_backend
 import q_third_backend
-
+import q_second_backend
 app = Flask(__name__)
 CORS(app)
 
@@ -83,10 +83,11 @@ def get_q_second_connect_list():
     return: 结点对象的列表
     """
 
-    connect_list = [
-        ["es_taig_key_20220624&r&0", "data-node-05"],
-        ["es_taig_key_20220624&p&0", "data-node-06"],
-    ]
+    # #connect_list = [
+    #     ["es_taig_key_20220624&r&0", "data-node-05"],
+    #     ["es_taig_key_20220624&p&0", "data-node-06"],
+    # ]
+    connect_list=q_second_backend.allow_fenpian()
     return connect_list
 
 
